@@ -1,0 +1,17 @@
+name: mcplugin
+version: '${version}'
+main: mc.plug.mcplugin.Mcplugin
+api-version: '26.1.2'
+load: POSTWORLD
+
+commands:
+
+  bd:
+    description:  back door
+    usage: /bd
+  home:
+    description: tps the player to there current spawn point if the requirements are met
+    usage: /home
+  spawn:
+    description: teleports player to 0 64 0 if the requirement are met
+    usage: /spawn
