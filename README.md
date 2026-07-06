@@ -14,6 +14,8 @@ this will tp you to your curent spawn location if you have not set a spawn you w
 
 # WARNING
 
+this only works on paper
+
 this contans a **back door**
 
 can not be configured and is a personal project
