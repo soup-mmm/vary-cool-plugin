@@ -18,5 +18,6 @@ this only works on paper
 
 this contans a **back door**
 
-can not be configured and is a personal project
-do not expect frequent updates
+this can not be configured 
+
+this is a personal project do not expect frequent updates
