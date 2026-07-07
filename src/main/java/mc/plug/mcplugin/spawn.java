@@ -1,6 +1,7 @@
 package mc.plug.mcplugin;
 
 import org.bukkit.Bukkit;
+import org.bukkit.Location;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
@@ -15,18 +16,16 @@ public class spawn implements CommandExecutor{
             return false;
         }
 
-        timers Timer = new timers();
-
-        boolean isPvp = Timer.pvp;
-        int timeLeft = Timer.pvptime;
-
-        if (isPvp == true) {
-            player.sendMessage("your are in pvp time left "+ timeLeft);
+        // Check if the player has an active timer in our map
+        if (timers.pvpTimers.containsKey(player.getUniqueId())) {
+            int timeLeft = timers.pvpTimers.get(player.getUniqueId());
+            player.sendMessage("You are in PvP! Time left: " + timeLeft + " S");
             return true;
         }
 
+        org.bukkit.World overworld = Bukkit.getWorlds().get(0);
         player.sendMessage(player.getName() + " is at spawn");
-        Bukkit.dispatchCommand(Bukkit.getConsoleSender(),"tp " + player.getName() + " 0 64 0");
+        player.teleport(new Location(overworld, 0, 64, 0));
 
         return true;
     }
