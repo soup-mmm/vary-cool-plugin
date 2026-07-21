@@ -13,5 +13,3 @@ commands:
   spawn:
     description: teleports player to 0 64 0 if the requirement are met
     usage: /spawn
-  test:
-    usage: /test [subcommand]
