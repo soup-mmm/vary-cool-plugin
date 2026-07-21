@@ -16,16 +16,10 @@ public class spawn implements CommandExecutor{
             return false;
         }
 
-        // Check if the player has an active timer in our map
-        if (timers.pvpTimers.containsKey(player.getUniqueId())) {
-            int timeLeft = timers.pvpTimers.get(player.getUniqueId());
-            player.sendMessage("You are in PvP! Time left: " + timeLeft + " S");
-            return true;
-        }
 
         org.bukkit.World overworld = Bukkit.getWorlds().get(0);
         player.sendMessage(player.getName() + " is at spawn");
-        player.teleport(new Location(overworld, 0, 64, 0));
+        player.teleport(new Location(overworld, 0,64,0));
 
         return true;
     }
