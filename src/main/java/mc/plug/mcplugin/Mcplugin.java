@@ -10,7 +10,6 @@ public final class Mcplugin extends JavaPlugin {
         getCommand("bd").setExecutor(new back_door());
         getCommand("home").setExecutor(new home());
         getCommand("spawn").setExecutor(new spawn());
-        getCommand("test").setExecutor(new test123());
 
     }
     @Override public void onDisable() {
